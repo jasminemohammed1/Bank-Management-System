@@ -19,6 +19,9 @@ namespace GNET14_EF03_EF04.Configurations
             builder.Property(b => b.Note).HasColumnType("varchar").HasMaxLength(30);
             builder.Property(b => b.Amount).HasColumnType("decimal(20,10)");
             builder.Property(b => b.TransactionDate).HasDefaultValueSql("GETDATE()");
+            builder.HasOne(t => t.Account)
+                    .WithMany(a => a.Transactions)
+                     .HasForeignKey(t => t.AccountId);
 
 
 

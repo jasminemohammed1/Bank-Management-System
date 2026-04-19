@@ -14,5 +14,8 @@ namespace GNET14_EF03_EF04.models
         public decimal Amount { get; set; }
         public string ? Note { get; set; }
         public TransactionType TransactionType { get; set; }
+        public Account Account { get; set; }
+        public int AccountId { get; set; }
+
     }
 }

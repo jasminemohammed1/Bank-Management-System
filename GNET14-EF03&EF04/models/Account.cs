@@ -16,6 +16,7 @@ namespace GNET14_EF03_EF04.models
         public DateTime OpeningDate { get; set; }
         public Branch Branch { get; set; }
         public int BranchId { get; set; }
+        public ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
 
     }
 }

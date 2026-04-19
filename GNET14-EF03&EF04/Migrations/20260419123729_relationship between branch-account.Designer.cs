@@ -4,6 +4,7 @@ using GNET14_EF03_EF04;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GNET14_EF03_EF04.Migrations
 {
     [DbContext(typeof(DBContextBankApp))]
-    partial class DBContextBankAppModelSnapshot : ModelSnapshot
+    [Migration("20260419123729_relationship between branch-account")]
+    partial class relationshipbetweenbranchaccount
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -164,9 +167,6 @@ namespace GNET14_EF03_EF04.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionNumber"));
 
-                    b.Property<int>("AccountId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(20,10)");
 
@@ -183,8 +183,6 @@ namespace GNET14_EF03_EF04.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("TransactionNumber");
-
-                    b.HasIndex("AccountId");
 
                     b.ToTable("Transactions", (string)null);
                 });
@@ -209,22 +207,6 @@ namespace GNET14_EF03_EF04.Migrations
                         .IsRequired();
 
                     b.Navigation("BranchManager");
-                });
-
-            modelBuilder.Entity("GNET14_EF03_EF04.models.Transaction", b =>
-                {
-                    b.HasOne("GNET14_EF03_EF04.models.Account", "Account")
-                        .WithMany("Transactions")
-                        .HasForeignKey("AccountId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Account");
-                });
-
-            modelBuilder.Entity("GNET14_EF03_EF04.models.Account", b =>
-                {
-                    b.Navigation("Transactions");
                 });
 
             modelBuilder.Entity("GNET14_EF03_EF04.models.Branch", b =>
