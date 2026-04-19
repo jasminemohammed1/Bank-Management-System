@@ -17,7 +17,7 @@ namespace GNET14_EF03_EF04.models
         public DateTime OwnerShipStartDate {  get; set; }
         public OwnerShipType OwnerShipType { get; set; }
 
-        public AccountType AccountType { get; set; }
+        public AccountStatus AccountStatus { get; set; }
 
 
     }

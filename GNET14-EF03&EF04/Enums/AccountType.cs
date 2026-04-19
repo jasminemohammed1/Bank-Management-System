@@ -8,9 +8,9 @@ namespace GNET14_EF03_EF04.Enums
 {
     internal enum AccountType
     {
-        Savings,
-        Current,
-        Bussiness
+        Savings =1,
+        Current =2,
+        Bussiness =3
 
     }
 }

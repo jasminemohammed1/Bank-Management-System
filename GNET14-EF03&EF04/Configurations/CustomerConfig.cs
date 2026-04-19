@@ -16,9 +16,9 @@ namespace GNET14_EF03_EF04.Configurations
             builder.ToTable("Customers");
             builder.HasKey(b => b.Id);
             builder.Property(b => b.Id).UseIdentityColumn();
-            builder.Property(b => b.NationalId).HasColumnType("varchar");
+            builder.Property(b => b.NationalId).HasColumnType("varchar").HasMaxLength(30);
             builder.Property(b => b.Address).HasColumnType("varchar").HasMaxLength(30);
-            builder.Property(b =>b.Email).HasColumnType("varchar").IsRequired();
+            builder.Property(b =>b.Email).HasColumnType("varchar").HasMaxLength(40).IsRequired();
             builder.Property(b => b.FullName).HasColumnType("varchar").HasMaxLength(30);
         }
     }

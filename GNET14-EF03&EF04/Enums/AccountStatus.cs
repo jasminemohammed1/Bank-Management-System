@@ -8,7 +8,7 @@ namespace GNET14_EF03_EF04.Enums
 {
     internal enum AccountStatus
     {
-        Active,
-        NotActive
+        Active =1,
+       closed =2
     }
 }

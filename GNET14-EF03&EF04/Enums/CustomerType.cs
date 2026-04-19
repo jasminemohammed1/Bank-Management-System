@@ -8,7 +8,7 @@ namespace GNET14_EF03_EF04.Enums
 {
     internal enum CustomerType
     {
-       Indivials , 
-       Organization
+       Indivials = 1 , 
+       Organization = 2
     }
 }

@@ -9,7 +9,7 @@ namespace GNET14_EF03_EF04.Enums
     internal enum OwnerShipType
     {
 
-        PrimaryHolder,
-        CoHolder
+        PrimaryHolder =1,
+        CoHolder =2
     }
 }

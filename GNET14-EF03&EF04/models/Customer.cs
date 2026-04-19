@@ -11,7 +11,7 @@ namespace GNET14_EF03_EF04.models
     {
         public int Id { get; set; }
         public string Address { get; set; } = default!;
-        public DateOnly  ?DateOfBirth { get; set; }
+        public DateTime  ?DateOfBirth { get; set; }
         public string FullName { get; set; } = default!;
         public string Email { get; set; } = default!;
         public string PhoneNumber { get; set; } = default!;

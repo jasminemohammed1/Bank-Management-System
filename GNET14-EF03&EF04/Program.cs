@@ -1,5 +1,7 @@
-﻿using GNET14_EF03_EF04.models;
+﻿using GNET14_EF03_EF04.Migrations;
+using GNET14_EF03_EF04.models;
 using Microsoft.EntityFrameworkCore;
+using static GNET14_EF03_EF04.Helper.Helper;
 
 namespace GNET14_EF03_EF04
 {
@@ -82,6 +84,50 @@ namespace GNET14_EF03_EF04
             //    }
             //}
             #endregion
+            while(true)
+            {
+                Console.Clear();
+                Console.WriteLine("======================");
+                Console.WriteLine("National Bank Mangement");
+                Console.WriteLine("=====================");
+                Console.WriteLine("1) Add a new Customer.");
+                Console.WriteLine("2) Open a new Account for a customer.");
+                Console.WriteLine("3) Update Account Status (Active or Closed).");
+                Console.WriteLine("4) Remove an Account From a Csutomer.");
+                Console.WriteLine("5) List All Customers With Accounts.");
+                Console.WriteLine("0) Exist.");
+                Console.WriteLine("=====================");
+
+                int choice = ValidateChoice("Enter Choice:");
+                switch (choice)
+                {
+                    case 1:
+                        AddCustomer();
+                        break;
+                    case 2:
+                        OpenAccount();
+                      break;
+                    case 3:
+                        UpdateAccountStatus();
+                        break;
+                    case 4:
+                        RemoveAccountFromCustomer();
+                        break;
+                    case 5:
+                        ListCustomers();
+                        break;
+                    case 0:
+                        dbcontext.Dispose();
+                        Console.WriteLine("Existing...");
+                        return ;
+
+
+
+                   
+
+
+                }
+            }
         }
     }
 }
