@@ -21,6 +21,7 @@ namespace GNET14_EF03_EF04
             modelBuilder.ApplyConfiguration(new AccountConfig());
             modelBuilder.ApplyConfiguration(new TransactionConfig());
             modelBuilder.ApplyConfiguration(new CustomerConfig());
+            modelBuilder.ApplyConfiguration(new AccountCustomerConfig());
         }
     }
 }

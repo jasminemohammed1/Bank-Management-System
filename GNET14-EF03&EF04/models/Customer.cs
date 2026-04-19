@@ -18,6 +18,7 @@ namespace GNET14_EF03_EF04.models
 
         public CustomerType CustomerType { get; set; }
         public string NationalId { get; set; } = default!;
+        public ICollection<AccountCustomer> AccountCustomers { get; set; } = new List<AccountCustomer>();
 
     }
 }
