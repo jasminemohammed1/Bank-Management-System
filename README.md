@@ -11,7 +11,7 @@ The project heavily uses **Entity Framework Core (EFC)** ⚙️ for data access,
 The project structure is organized as follows:
 
 Bank-Management-System/
-│
+
 ├── 📁 Models/            → Domain entities representing database tables  
 ├── 📁 Configurations/    → Fluent API configurations for relationships and constraints  
 ├── 📁 Enums/             → Strongly-typed values to improve readability and reduce magic values  
