@@ -1,6 +1,6 @@
 # 🏦 Bank Management System
 
-This is a **Bank Management System** built using C# and Entity Framework Core ⚙️ with a **Database First approach** 🗄️. The project demonstrates how to work with an existing SQL Server database where EF Core is used to scaffold the DbContext and models directly from the database. It focuses on using **Entity Framework Core (EFC)** for data access, **LINQ** for querying 📊, and handling schema changes when needed during development.
+This is a **Bank Management System** built using C# and Entity Framework Core ⚙️ with a **Code First approach** 🗄️. The project demonstrates how to work with an existing SQL Server database where EF Core is used to scaffold the DbContext and models directly from the database. It focuses on using **Entity Framework Core (EFC)** for data access, **LINQ** for querying 📊, and handling schema changes when needed during development.
 
 The main idea behind this project is to apply **Separation of Concerns** 🧩 while working with a database-driven architecture. Instead of mixing everything together, the system is divided into clear parts so each responsibility is isolated, easier to understand, and easier to maintain.
 
