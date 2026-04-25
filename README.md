@@ -1,26 +1,28 @@
 # 🏦 Bank Management System
 
-This is a **Bank Management System** built using C# and Entity Framework Core ⚙️ with a **Code First approach** 🗄️. The project demonstrates how to work with an existing SQL Server database where EF Core is used to scaffold the DbContext and models directly from the database. It focuses on using **Entity Framework Core (EFC)** for data access, **LINQ** for querying 📊, and handling schema changes when needed during development.
+This is a **Bank Management System** built using C# and Entity Framework Core ⚙️ following a **Code First approach** 🧑‍💻. The project focuses on designing the database through code using EF Core, where models are defined in the application and then migrated to SQL Server using **Entity Framework Core Migrations** 📦.
 
-The main idea behind this project is to apply **Separation of Concerns** 🧩 while working with a database-driven architecture. Instead of mixing everything together, the system is divided into clear parts so each responsibility is isolated, easier to understand, and easier to maintain.
+The main goal of this project is to demonstrate how to build a clean and scalable backend system using **EF Core (EFC)** 🔄 while applying proper **Separation of Concerns** 🧩 to keep the code organized, maintainable, and easy to extend.
 
-Entity Framework Core is the main ORM used to communicate with the database 🔄. Since this is a Database First approach, the database is created first 🗄️, and EF Core is used to scaffold the models and DbContext from it. Any changes in the database are reflected back into the application by updating the generated models. Migrations can also be used in some development cases when extending the schema, but the database remains the source of truth 📌.
+In this approach, the domain models are written first in C#, and EF Core is responsible for generating and updating the database schema through migrations 🗄️. This allows full control over the database structure directly from the codebase. Any changes in the models are tracked using migrations and applied to the database in a controlled way.
+
+The project heavily uses **Entity Framework Core (EFC)** ⚙️ for data access, along with **LINQ** 📊 for querying and manipulating data in a clean and readable way. Migrations are a core part of the workflow, ensuring that the database stays in sync with the evolving domain models.
 
 The project structure is organized as follows:
 
 Bank-Management-System/
 │
-├── 📁 Models/            → Entity classes generated from the database and used by EF Core  
-├── 📁 Configurations/    → Fluent API configurations for mapping tables and relationships  
-├── 📁 Enums/             → Enumeration types for cleaner and more readable code  
-├── 📁 Helpers/           → Utility and reusable logic used across the system  
+├── 📁 Models/            → Domain entities representing database tables  
+├── 📁 Configurations/    → Fluent API configurations for relationships and constraints  
+├── 📁 Enums/             → Strongly-typed values to improve readability and reduce magic values  
+├── 📁 Helpers/           → Shared utility classes and reusable logic across the system  
 
-This structure strongly supports **Separation of Concerns** 🧠.  
-- 📦 Models represent database tables  
-- ⚙️ Configurations define entity mapping using Fluent API  
-- 🔢 Enums replace magic strings/numbers with strongly typed values  
-- 🛠️ Helpers contain shared reusable functionality  
+This structure follows **Separation of Concerns** 🧠:
+- 📦 Models define the domain structure  
+- ⚙️ Configurations handle EF Core Fluent API mapping  
+- 🔢 Enums provide clean and type-safe values  
+- 🛠️ Helpers contain shared functionality and utilities  
 
-By using Entity Framework Core with a Database First approach, the project stays clean, maintainable, and closer to real-world enterprise systems 🏢. It shows how database-driven applications can still follow clean architecture principles and remain scalable without becoming tightly coupled.
+By using a **Code First approach with EF Core** ✨, the project ensures that the database evolves with the application. Migrations make it easy to track changes, update schema versions, and maintain consistency between code and database.
 
-Overall, this project demonstrates how to build a structured backend system using EF Core with Database First design 📊, while applying proper layering, clean code principles ✨, and separation of responsibilities.
+Overall, this project demonstrates how to build a structured backend system using **Entity Framework Core + Code First + Migrations** 🚀 while maintaining clean architecture principles, proper layering, and scalable design.
